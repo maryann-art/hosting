@@ -1,0 +1,92 @@
+<!DOCTYPE html/>
+<html>
+<head>
+     <title>vertical css menu</title>
+     <style>
+      .pure-menu{
+       color:#308d46;
+       }
+      p,ul,li,nav,div{
+       padding:0;
+       margin:0;
+       }
+      .menu{
+       overflow:auto;
+       position:relative;
+       z-index:2;
+       }
+      .parent-menu{
+       background-color:#0c8fff;
+       min-width:200px;
+       float:left;
+       }
+       #menu ul{
+       list-style-type:none;
+       }
+       #menu ul li a{
+       padding:10px 15px;
+       display:block;
+       color:#fff;
+       text-decoration:none;
+       }
+       #menu ul li a:hover{
+       background-color:#007ee9;
+       }
+       #menu ul li a:hover ~ ul{
+       left:200px;
+       }
+       #menu ul li>ul{
+       position:absolute;
+       background-color:#333;
+       top:0;
+       left:-200px;
+       min-width:200px;
+       z-index:-1;
+       height:100%;
+       }
+       #menu ul li>ul li a:hover{
+       background-color:#2e2e2e;
+       }
+       img{
+       position:absolute;
+       left:0px;
+       top:0;
+       z-index:-1;
+        }
+     </style>
+</head>
+      <body>
+      <img src="images/fruits.jpg" alt="fruits"/>
+   <div class="pure-menu">
+   <nav id="menu">
+      <ul class="parent-menu">
+        <li><a href="#">
+         home&kitchen <a>
+      <ul>
+       <li><a href="#"> item1</a></li>
+       <li><a href="#">item2</a></li>
+       <li><a href="#">item3 </a></li>
+       </ul>
+        </li>
+    <li><a href="#">
+         bedding <a>
+      <ul>
+       <li><a href="#"> sheets</a></li>
+       <li><a href="#">pillows</a></li>
+       <li><a href="#">duvet </a></li>
+       </ul>
+        </li>
+      <li><a href="#">
+         toiletries<a>
+      <ul>
+       <li><a href="#"> santiee</a></li>
+       <li><a href="#">wipes</a></li>
+       <li><a href="#">tissue </a></li>
+       </ul>
+        </li>
+     
+    </nav>
+   </div>
+
+</body>
+</html>
